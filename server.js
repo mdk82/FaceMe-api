@@ -52,8 +52,8 @@ app.post('/register', (req, res) => {
     if (!name) {
         return res.status(400).json('must enter a name')
     }
-    if (password.length <= 6) {
-        return res.status(400).json('password must be at least 6 characters long')
+    if (!password) {
+        return res.status(400).json('must enter a password')
     }
     const hash = bcrypt.hashSync(password);
     db.transaction(trx => {
