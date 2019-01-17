@@ -2,7 +2,7 @@
   "name": "faceme-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "knex": "^0.16.3",
+    "nodemon": "^1.18.9",
     "pg": "^7.8.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
   }
 }
