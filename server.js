@@ -21,7 +21,6 @@ app.use(bodyparser.json());
 
 app.get('/', (req, res) => {
     res.json('working');
-
 });
 
 app.post('/signin', (req, res) => {
@@ -110,7 +109,6 @@ app.put('/image', (req, res) => {
     .catch(err => res.status(400).json('unable to get entries'))
 })
 
-const PORT = process.env.PORT;
-app.listen(PORT || 3000, () => {
-    console.log(`server running on port , ${PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`server running on port , ${process.env.PORT}`);
 });
